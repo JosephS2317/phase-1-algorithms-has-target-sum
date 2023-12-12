@@ -1,17 +1,31 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for(let startIndex = 0; startIndex < Math.floor(array.length / 2) ; startIndex++){
+   for(let endIndex = startIndex + 1 ; endIndex < array.length ; endIndex++){
+    if(array[startIndex] + array[endIndex] === target){
+      return true
+    }
+   }
+  }
+  return false
 }
+
+
 
 /* 
   Write the Big O time complexity of your function here
+O(n^2)
 */
 
 /* 
   Add your pseudocode here
+starting from each end of the array. if the those values added equal dont equal the target
+the function returns false. otherwise it returns true.
 */
 
 /*
   Add written explanation of your solution here
+  We start with the first index of the array, we then say that that it should be less then
+  whatever half the total number of 
 */
 
 // You can run `node index.js` to view these console logs
